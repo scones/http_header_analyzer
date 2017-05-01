@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "http_header_analyzer",
+  "description": "Display the current (base page) http request and response headers on request",
+  "version": "0.1.0",
+
+  "background": {
+     "persistent": true,
+     "scripts": [
+       "background.js"
+     ]
+  },
+  "browser_action": {
+    "default_title": "HTTP Header Analyzer",
+    "default_icon": "icon.svg",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "tabs",
+    "activeTab",
+    "storage",
+    "webRequest",
+    "notifications"
+  ]
+}
+
