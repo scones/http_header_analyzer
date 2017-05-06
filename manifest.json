@@ -28,10 +28,8 @@
     "http://*/*",
     "https://*/*",
     "tabs",
-    "activeTab",
     "storage",
-    "webRequest",
-    "notifications"
+    "webRequest"
   ]
 }
 
