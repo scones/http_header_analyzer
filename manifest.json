@@ -3,7 +3,7 @@
 
   "name": "HTTP Header Analyzer",
   "description": "Display the current (base page) http request and response headers on request",
-  "version": "1.0.1",
+  "version": "1.0.2",
 
   "background": {
      "persistent": true,
