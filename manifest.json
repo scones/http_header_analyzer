@@ -13,7 +13,7 @@
   },
   "browser_action": {
     "default_title": "HTTP Header Analyzer",
-    "default_icon": "icons/eye_32.png",
+    "default_icon": "icons/eye_128.png",
     "default_popup": "popup.html"
   },
   "icons": {
