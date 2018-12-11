@@ -15,7 +15,10 @@ function dump_headers(objectName) {
 
       if ('undefined' == typeof(store) || 'undefined' == typeof(store.http_header_analyzer))
         return;
+
       tab_infos = store.http_header_analyzer[tab_id];
+      if ('undefined' == typeof(tab_infos))
+        return;
 
       var initial_string = '';
       var header_array = [];
