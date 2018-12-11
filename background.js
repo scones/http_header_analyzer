@@ -32,7 +32,6 @@ window.browser.webRequest.onHeadersReceived.addListener(
   ['responseHeaders']
 );
 
-
 window.browser.webRequest.onSendHeaders.addListener(
   function(info) {
     http_header_analyzer_store_result('requestInfo', info.tabId, info);
@@ -47,3 +46,12 @@ window.browser.webRequest.onSendHeaders.addListener(
   ['requestHeaders']
 );
 
+window.browser.tabs.onRemoved.addListener(function(tab_id, removed) {
+  window.browser.storage.local.get('http_header_analyzer', function(store) {
+    delete store.http_header_analyzer[tab_id];
+  });
+});
+
+window.browser.windows.onRemoved.addListener(function(windowid) {
+  window.browser.storage.local.remove('http_header_analyzer');
+});
