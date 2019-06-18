@@ -24,7 +24,7 @@ function dump_headers(objectName) {
       var header_array = [];
       if ('requestInfo' == objectName) {
         // extract the url path
-        var url_path = tab_infos.requestInfo.url.replace(/^http(s)?:\/\/[^\/]+?\/?(.*)/, '/$2');
+        var url_path = tab_infos.requestInfo.url.replace(/^http(s)?:\/\/[^\/]+\/?(.*)/, '/$2');
 
         // steal the used protocol from the response status line
         var protocol = tab_infos.responseInfo.statusLine.replace(/^(HTTP\/1\..) .*/, '$1');
